@@ -1,0 +1,5 @@
+{
+  "extends": "@pkgs/config/node.json",
+  "exclude": ["node_modules", "dist"],
+  "include": ["src"]
+}

@@ -1,22 +1,14 @@
 {
-  "name": "codemata",
+  "name": "codemata-root",
+  "private": true,
   "devDependencies": {
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
-    "vite": "^7.3.1",
-    "vite-plugin-dts": "^4.5.4"
-  },
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    "vite": "^7.3.1"
   },
   "scripts": {
-    "build": "vite build",
-    "dev": "vite dev",
-    "preview": "vite preview"
+    "build": "pnpm -r build",
+    "dev": "pnpm -r dev"
   },
-  "type": "module",
-  "types": "./dist/index.d.ts"
+  "type": "module"
 }
