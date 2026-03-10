@@ -1,5 +1,4 @@
 {
-  "extends": "@pkgs/config/web.json",
-  "exclude": ["node_modules", "dist"],
+  "extends": "@pkgs/config/tsconfig/web.json",
   "include": ["src"]
 }

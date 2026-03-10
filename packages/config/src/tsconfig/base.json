@@ -12,8 +12,6 @@
     "declaration": true,
     "declarationMap": true,
     "noUnusedLocals": true,
-    "noUnusedParameters": true,
-
-    "composite": true
+    "noUnusedParameters": true
   }
 }

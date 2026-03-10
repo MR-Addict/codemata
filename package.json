@@ -1,14 +1,21 @@
 {
-  "name": "codemata-root",
-  "private": true,
+  "name": "root",
   "devDependencies": {
-    "tsx": "^4.21.0",
-    "typescript": "^5.9.3",
-    "vite": "^7.3.1"
+    "prettier": "^3.8.1",
+    "syncpack": "^14.2.0"
+  },
+  "prettier": {
+    "useTabs": false,
+    "singleQuote": false,
+    "trailingComma": "none",
+    "printWidth": 120
   },
   "scripts": {
     "build": "pnpm -r build",
-    "dev": "pnpm -r dev"
+    "dev": "pnpm -r dev",
+    "format": "prettier -c --write . && syncpack format",
+    "pkg:lint": "syncpack fix --specifier-types range",
+    "pkg:update": "syncpack update"
   },
   "type": "module"
 }

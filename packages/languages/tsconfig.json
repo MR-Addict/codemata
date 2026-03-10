@@ -1,5 +1,11 @@
 {
-  "extends": "@pkgs/config/node.json",
-  "exclude": ["node_modules", "dist"],
+  "extends": "@pkgs/config/tsconfig/node.json",
+
+  "compilerOptions": {
+    "baseUrl": "./",
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+
   "include": ["src"]
 }
