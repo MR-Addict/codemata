@@ -7,13 +7,22 @@
     "@pkgs/config": "workspace:*",
     "@types/node": "^25.4.0",
     "tsx": "^4.21.0",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "zod": "^4.3.6"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/languages.d.ts",
+      "import": "./dist/languages.js",
+      "default": "./dist/languages.js"
+    }
   },
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "tsx src/build.ts"
+    "build": "tsx src/build.ts",
+    "dev": "tsx watch src/build.ts"
   },
   "type": "module"
 }

@@ -2,7 +2,7 @@
   "name": "@pkgs/www",
   "devDependencies": {
     "@pkgs/config": "workspace:*",
-    "codemata": "workspace:*",
+    "@pkgs/core": "workspace:*",
     "typescript": "^5.9.3",
     "vite": "^7.3.1"
   },

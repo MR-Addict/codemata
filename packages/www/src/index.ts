@@ -1,3 +1,3 @@
-import { foo } from "codemata";
+import { foo } from "@pkgs/core";
 
 console.log(foo);

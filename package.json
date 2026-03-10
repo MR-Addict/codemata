@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "codemata",
   "devDependencies": {
     "prettier": "^3.8.1",
     "syncpack": "^14.2.0"

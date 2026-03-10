@@ -1,9 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
+
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "bundler",
     "lib": ["DOM", "DOM.Iterable", "ESNext"]
   },
+
   "exclude": ["node_modules", "dist"]
 }
