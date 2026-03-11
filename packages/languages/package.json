@@ -12,9 +12,9 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/languages.d.ts",
-      "import": "./dist/languages.js",
-      "default": "./dist/languages.js"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
     }
   },
   "files": [

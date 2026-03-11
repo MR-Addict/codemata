@@ -1,3 +1,5 @@
-export const foo = "foo";
+import { languages } from "@pkgs/languages";
 
-document.body.innerHTML = `<h1>${foo}</h1>`;
+export function getLanguages() {
+  return languages;
+}
