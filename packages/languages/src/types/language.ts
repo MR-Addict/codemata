@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-export const RawLanguageSchema = z.object({
+export const LanguageSchema = z.object({
   /**
    * The name of the language, which should be unique across all languages.
    *
@@ -91,16 +91,6 @@ export const RawLanguageSchema = z.object({
    * @default false
    */
   wrap: z.boolean().optional()
-});
-
-export type RawLanguage = z.infer<typeof RawLanguageSchema>;
-
-export const LanguageSchema = RawLanguageSchema.pick({
-  name: true,
-  extensions: true,
-  filenames: true,
-  aliases: true,
-  color: true
 });
 
 export type Language = z.infer<typeof LanguageSchema>;

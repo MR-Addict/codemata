@@ -1,6 +1,7 @@
 # build
-dist
+packages/languages/src/languages
 .cache
+dist
 
 # dependencies
 node_modules
