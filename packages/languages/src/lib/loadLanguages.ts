@@ -4,7 +4,7 @@ import YAML from "yaml";
 import { z } from "zod";
 
 import { writeFile } from "../utils/writeFile.js";
-import { Language, RawLanguageSchema, LanguageSchema } from "../types/language.js";
+import { RawLanguageSchema, LanguageSchema } from "../types/language.js";
 
 const languagesUrl = "https://raw.githubusercontent.com/github/linguist/master/lib/linguist/languages.yml";
 
@@ -13,7 +13,7 @@ const languagesUrl = "https://raw.githubusercontent.com/github/linguist/master/l
  *
  * @returns An array of Language objects.
  */
-export async function loadLanguages(): Promise<Language[]> {
+export async function loadLanguages() {
   const cacheDir = path.resolve(".cache");
   const cacheFile = path.join(cacheDir, "languages.yml");
 
@@ -34,5 +34,7 @@ export async function loadLanguages(): Promise<Language[]> {
   }
 
   const validatedRawLanguages = z.array(RawLanguageSchema).parse(rawLanguages);
-  return z.array(LanguageSchema).parse(validatedRawLanguages);
+  const validatedLanguages = z.array(LanguageSchema).parse(validatedRawLanguages);
+
+  return { data: validatedLanguages, raw: validatedRawLanguages };
 }
