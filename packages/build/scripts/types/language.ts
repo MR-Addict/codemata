@@ -101,6 +101,7 @@ export const RawLanguageSchema = z.object({
  */
 export const LanguageSchema = RawLanguageSchema.pick({
   name: true,
+  type: true,
   extensions: true,
   filenames: true,
   aliases: true,

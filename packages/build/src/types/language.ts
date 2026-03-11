@@ -3,6 +3,7 @@
  */
 export type Language = {
   name: string;
+  type: "data" | "programming" | "markup" | "prose";
   color?: string;
   extensions?: string[];
   filenames?: string[];
