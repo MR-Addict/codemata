@@ -2,7 +2,7 @@
   "name": "@pkgs/core",
   "devDependencies": {
     "@pkgs/config": "workspace:*",
-    "@pkgs/languages": "workspace:*",
+    "@pkgs/build": "workspace:*",
     "tsdown": "^0.21.1",
     "typescript": "^5.9.3"
   },

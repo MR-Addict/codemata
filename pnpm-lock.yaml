@@ -15,24 +15,7 @@ importers:
         specifier: ^14.2.0
         version: 14.2.0
 
-  packages/config: {}
-
-  packages/core:
-    devDependencies:
-      '@pkgs/config':
-        specifier: workspace:*
-        version: link:../config
-      '@pkgs/languages':
-        specifier: workspace:*
-        version: link:../languages
-      tsdown:
-        specifier: ^0.21.1
-        version: 0.21.1(typescript@5.9.3)
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
-
-  packages/languages:
+  packages/build:
     devDependencies:
       '@pkgs/config':
         specifier: workspace:*
@@ -52,6 +35,23 @@ importers:
       zod:
         specifier: ^4.3.6
         version: 4.3.6
+
+  packages/config: {}
+
+  packages/core:
+    devDependencies:
+      '@pkgs/build':
+        specifier: workspace:*
+        version: link:../build
+      '@pkgs/config':
+        specifier: workspace:*
+        version: link:../config
+      tsdown:
+        specifier: ^0.21.1
+        version: 0.21.1(typescript@5.9.3)
+      typescript:
+        specifier: ^5.9.3
+        version: 5.9.3
 
   packages/www:
     devDependencies:

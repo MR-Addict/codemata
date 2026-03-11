@@ -1,6 +1,9 @@
 import { z } from "zod";
 
-export const LanguageSchema = z.object({
+/**
+ * Schema representing the raw language data as defined by GitHub Linguist.
+ */
+export const RawLanguageSchema = z.object({
   /**
    * The name of the language, which should be unique across all languages.
    *
@@ -93,4 +96,14 @@ export const LanguageSchema = z.object({
   wrap: z.boolean().optional()
 });
 
-export type Language = z.infer<typeof LanguageSchema>;
+/**
+ * Schema representing a programming language with the relevant fields for detection and display.
+ */
+export const LanguageSchema = RawLanguageSchema.pick({
+  name: true,
+  extensions: true,
+  filenames: true,
+  aliases: true,
+  interpreters: true,
+  color: true
+});

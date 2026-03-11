@@ -1,0 +1,9 @@
+{
+  "extends": "@pkgs/config/tsconfig/web.json",
+
+  "compilerOptions": {
+    "outDir": "../dist"
+  },
+
+  "include": ["**/*.ts"]
+}

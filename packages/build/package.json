@@ -1,5 +1,5 @@
 {
-  "name": "@pkgs/languages",
+  "name": "@pkgs/build",
   "devDependencies": {
     "@pkgs/config": "workspace:*",
     "@types/node": "^25.4.0",
@@ -19,7 +19,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsx src/scripts/build.ts && tsc"
+    "build": "tsx scripts/build.ts && tsc -p src/tsconfig.json"
   },
   "type": "module"
 }
