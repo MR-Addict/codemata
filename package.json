@@ -4,6 +4,7 @@
     "prettier": "^3.8.1",
     "syncpack": "^14.2.0"
   },
+  "packageManager": "pnpm@10.32.1",
   "prettier": {
     "useTabs": false,
     "singleQuote": false,
