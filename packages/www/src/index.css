@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  margin-inline: auto;
+
+  & input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+    outline: none;
+
+    &:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+    }
+  }
+
+  & div {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 4px;
+  }
+}
