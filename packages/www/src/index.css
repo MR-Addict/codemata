@@ -1,36 +1,169 @@
+:root {
+  --color-canvas-default: #ffffff;
+  --color-canvas-subtle: #f6f8fa;
+  --color-border-default: #d0d7de;
+  --color-accent-fg: #0969da;
+  --color-fg-default: #1f2328;
+  --color-fg-muted: #656d76;
+  --color-header-bg: #24292f;
+  --color-header-text: rgba(255, 255, 255, 0.7);
+  --color-neutral-muted: rgba(175, 184, 193, 0.2);
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-#root {
-  min-height: 100vh;
-  min-height: 100dvh;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--color-fg-default);
+  background-color: var(--color-canvas-default);
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.app-header {
+  background-color: var(--color-header-bg);
+  color: #ffffff;
+  padding: 16px 0;
+}
+
+.header-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  fill: #ffffff;
+  margin-right: 12px;
+}
+
+.header-title {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.header-separator {
+  margin: 0 4px;
+  color: var(--color-header-text);
+}
+
+.header-subtitle {
+  color: var(--color-header-text);
+}
+
+.app-main {
+  padding: 32px 0;
+  min-height: calc(100vh - 120px);
+}
+
+/* Box Styling (GitHub Repo Box Style) */
+.box {
+  background-color: var(--color-canvas-default);
+  border: 1px solid var(--color-border-default);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.box-header {
+  background-color: var(--color-canvas-subtle);
+  border-bottom: 1px solid var(--color-border-default);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.box-title {
+  font-weight: 600;
+}
+
+.box-body {
+  padding: 0;
+}
+
+.text-small {
+  font-size: 12px;
+  color: var(--color-fg-muted);
+}
+
+/* Code Editor Area */
+#code-input {
   width: 100%;
-  max-width: 600px;
-  padding: 2rem;
-  margin-inline: auto;
+  min-height: 300px;
+  padding: 16px;
+  border: none;
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  resize: vertical;
+  background-color: var(--color-canvas-default);
+  color: var(--color-fg-default);
+}
 
-  & input {
-    width: 100%;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-    border-radius: 0.25rem;
-    outline: none;
+#code-input:focus {
+  outline: none;
+}
 
-    &:focus {
-      border-color: #007bff;
-      box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
-    }
-  }
+/* Blankslate (GitHub Empty State) */
+.blankslate {
+  padding: 32px;
+  text-align: center;
+  color: var(--color-fg-muted);
+}
 
-  & div {
-    background-color: #f0f0f0;
-    padding: 1rem;
-    border-radius: 4px;
-  }
+/* Result Items */
+.language-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 10px;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  color: var(--color-accent-fg);
+  background-color: var(--color-neutral-muted);
+  border: 1px solid var(--color-border-default);
+  border-radius: 2em;
+  margin: 16px;
+}
+
+.language-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+  background-color: var(--color-accent-fg);
+}
+
+.result-content {
+  padding: 16px;
+}
+
+.result-details {
+  background-color: var(--color-canvas-subtle);
+  border-radius: 6px;
+  padding: 12px;
+  margin-top: 8px;
+  font-family: monospace;
+  font-size: 12px;
+  overflow: auto;
+}
+
+.app-footer {
+  padding: 32px 0;
+  border-top: 1px solid var(--color-border-default);
+  color: var(--color-fg-muted);
+  font-size: 12px;
+  text-align: center;
 }
